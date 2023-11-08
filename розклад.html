@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+             margin-bottom: 20px;
+            color: #021f3d; 
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 20px;
+
+            margin-bottom: 20px;
+        }
+
+        .registration-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .registration-form {
+            background-color: #019bee;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 150px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .registration-form label {
+            margin-bottom: 10px;
+        }
+
+        .registration-form input {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .registration-form button {
+            padding: 10px;
+            background-color: #f8db00; 
+            color: #000000;
+            border: none;
+            cursor: pointer;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: #5b94b2;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        }
+
+        table, th, td {
+            border: 2px solid #f8db00; 
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+
+        .timetable {
+            margin-right: 20px;
+        }
+
+        .logo {
+            margin-left: 20px;
+            margin-right: 20px;
+            
+        }
+
+        
+        .timetable table {
+            width: auto;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>РОЗКЛАД С-21 ГРУПИ</h1>
+        <p>ІСЗЗІ НТУУ КПІ ім. Ігоря Сікорьского</p>
+        <p>18.09.2023-23.09.2023</p>
+    </div>
+    <div class="registration-container">
+        <img src="https://kpi.ua/images/iszzi.png" alt="Герб інституту" class="logo">
+        <div class="timetable">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>понеділок 18.09</th>
+                    <th>вівторок 19.09</th>
+                    <th>середа 20.09</th>
+                    <th>четверг 21.09</th>
+                    <th>пятниця 22.09</th>
+                    <th>субота 23.09</th>
+                </tr>
+                <tr>
+                    <td>8:30-10:05</td>
+                    <td>ФВ</td>
+                    <td>ІМ</td>
+                    <td>ЗВП</td>
+                    <td>ФВ</td>
+                    <td>ФВ</td>
+                    <td>СР</td>
+                </tr>
+                <tr>
+                    <td>10:25-12:00</td>
+                    <td>ФВ</td>
+                    <td>ІМ</td>
+                    <td>ЗВП</td>
+                    <td>ФВ</td>
+                    <td>ФВ</td>
+                    <td>СР</td>
+                </tr>
+                <tr>
+                    <td>12:10-13:55</td>
+                    <td>ТС</td>
+                    <td>ТІК</td>
+                    <td>ПРОГА</td>
+                    <td>ТС</td>
+                    <td>ТІМ</td>
+                    <td>СР</td>
+                </tr>
+                <tr>
+                    <td>16:10-17:45</td>
+                    <td>СР</td>
+                    <td>СР</td>
+                    <td>СР</td>
+                    <td>ПРОГА</td>
+                    <td>СР</td>
+                    <td>СР</td>
+                </tr>   
+            </table>
+        </div>
+        <form class="registration-form" id="registrationForm" onsubmit="return validateForm()">
+            <h2>Реєстрація</h2>
+            <label for="firstName">Ім'я:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <label for="lastName">Прізвище:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirmPassword">Підтвердіть пароль:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            
+            <button type="submit">Зареєструватися</button>
+        </form>
+    </div>
+    <p class="error-message" id="errorMessage"></p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
